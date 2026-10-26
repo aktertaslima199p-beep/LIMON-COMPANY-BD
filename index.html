@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#087b55">
+  <title>LIMON COMPANY BD | Online Shopping</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="#">🛍 LIMON <span>COMPANY BD</span></a>
+  <form id="searchForm" class="search">
+    <input id="search" placeholder="তোমার পছন্দের পণ্য খুঁজুন..." aria-label="পণ্য খুঁজুন">
+    <button>খুঁজুন</button>
+  </form>
+  <button class="cart-button" id="cartBtn">🛒 কার্ট <span id="count">0</span></button>
+</header>
+
+<nav id="categories">
+  <button class="active" data-cat="সব">সব পণ্য</button>
+  <button data-cat="ইলেকট্রনিক্স">ইলেকট্রনিক্স</button>
+  <button data-cat="ফ্যাশন">ফ্যাশন</button>
+  <button data-cat="ঘর">ঘরের পণ্য</button>
+  <button data-cat="লাইফস্টাইল">লাইফস্টাইল</button>
+</nav>
+
+<section class="hero">
+  <div>
+    <span class="tag">WELCOME TO LIMON COMPANY BD</span>
+    <h1>কেনাকাটা হোক <span>সহজ ও আনন্দের!</span></h1>
+    <p>তোমার পছন্দের পণ্য, আকর্ষণীয় দাম—সব এক জায়গায়।</p>
+    <button id="shopBtn" class="primary">কেনাকাটা শুরু করো →</button>
+  </div>
+  <div class="hero-icon">🛍️</div>
+</section>
+
+<main id="shop">
+  <div class="section-title">
+    <div><small>YOUR DAILY SHOPPING</small><h2>জনপ্রিয় পণ্য ✨</h2></div>
+    <span id="resultCount"></span>
+  </div>
+  <div id="products" class="products"></div>
+</main>
+
+<section id="cartSection" class="cart-section" hidden>
+  <h2>🛒 তোমার শপিং কার্ট</h2>
+  <div id="cartItems"></div>
+  <h3>মোট: <span id="total">৳0</span></h3>
+  <button class="primary" id="checkoutBtn">অর্ডার করতে চাই</button>
+</section>
+
+<section id="checkout" class="checkout" hidden>
+  <h2>অর্ডারের তথ্য</h2>
+  <p>পেমেন্টের আগে বিকাশ নম্বর ও পেমেন্ট নির্দেশনা যাচাই করো।</p>
+  <form id="orderForm">
+    <label>তোমার নাম</label>
+    <input name="name" required maxlength="80" placeholder="সম্পূর্ণ নাম">
+    <label>মোবাইল নম্বর</label>
+    <input name="phone" required inputmode="tel" pattern="01[3-9][0-9]{8}" placeholder="01XXXXXXXXX">
+    <label>ডেলিভারির ঠিকানা</label>
+    <textarea name="address" required maxlength="500" placeholder="বাড়ি, এলাকা, জেলা"></textarea>
+    <label>পেমেন্ট পদ্ধতি</label>
+    <select name="payment">
+      <option>ক্যাশ অন ডেলিভারি</option>
+      <option>বিকাশ (ম্যানুয়াল)</option>
+    </select>
+    <div class="payment">
+      বিকাশ নম্বর: <strong>01633145470</strong>
+      <p>বিকাশ বেছে নিলে দোকানের মালিকের নির্দেশনা নিয়ে টাকা পাঠাবে।</p>
+    </div>
+    <button class="primary">অর্ডারের বিবরণ তৈরি করো</button>
+  </form>
+  <div id="orderSummary" aria-live="polite"></div>
+</section>
+
+<footer>
+  <h2>LIMON COMPANY BD</h2>
+  <p>তোমার অনলাইন শপিংয়ের ঠিকানা</p>
+  <p>বিকাশ যোগাযোগ: 01633145470</p>
+  <small>© 2026 LIMON COMPANY BD</small>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
